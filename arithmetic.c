@@ -34,6 +34,10 @@ int main()
     printf("Multiplication: \n");
     printf("num*2 = %d \n", num*2 );
     printf("num2*2 = %d \n\n",num2*2 );
+
+    printf("Modulus: \n");
+    printf("num%2 = %d \n", num%2 );    //uses MOD gives remainder
+    printf("num2%2 = %d \n\n",num2%2 ); // used MOD gives remainder
     
 
     return 0;

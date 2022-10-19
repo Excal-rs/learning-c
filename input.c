@@ -1,25 +1,24 @@
 #include <stdio.h>
+
 #include <string.h>
 
-int main()
-{
-    // to output in c it is printf - like a printer 
-    // to accept a input in c it is scanf - like a scanner 
-    // fgets can also be used but you should not mix them together as scanf keeps the enter key buffered.
-    int age[2]; // u have to declare the variable first and its length
 
-    printf("How old are you! \n");
-    fgets(age,2,stdin); //use & - scanf reads up to whitespace
-    age[strlen(age)-1] = '\0';
-    printf("You are %s years old \n", age);
 
-    char name[25];
-    printf("What is your name? \n");
-    
+int main(){
+
+    char name[25]; //the value inside square brackets is the length 
+    int age; // You have to declare variable first
+
+    printf("\nWhat's your name?"); //using fgets as scanf only follows to first whitespace
     fgets(name, 25, stdin);
-    name[strlen(name)-1] = '\0'; //removes \n character as fgets keeps it
-    printf("Your name is %s", name);
+    name[strlen(name)-1] = '\0'; // removes new line input from string
 
+    printf("How old are you?");
+    scanf("%d", &age); // & is not needed for string
+
+    printf("\nHello %s, how are you?\n", name);
+    printf("You are %d years old \n", age);
 
     return 0;
+
 }

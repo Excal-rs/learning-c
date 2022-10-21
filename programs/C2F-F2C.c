@@ -2,6 +2,14 @@
 #include <ctype.h>
 #include <string.h>
 
+char lowercase(char string[]){
+    for(int i = 0; string[i]; i++){
+        string[i] = tolower(string[i]);
+    }
+    return string;
+}
+
+
 double F2C(double F){
     double Celsius = (F - 32) * 5 / 9;
     return Celsius;
@@ -20,17 +28,20 @@ int main(){
     printf("What are you converting from? \n");
     scanf("%s", &convert);
 
+    lowercase(convert); // changes the input to lowercase so there are fewer cases to be covered by if statements
+
+
     printf("Enter temp:\n");
     scanf("%lf", &temp);
 
-
-    if (strcmp((tolower(convert)), "c2f")) {
+// TODO: use while loop to keep asking for input if input is invalid
+    if (strcmp(convert, "c2f")) {
         double f = C2F(temp);
         printf("%lf \n", f);
 
     }
 
-    else if (strcmp(tolower(convert),"f2c")) {
+    else if (strcmp(convert,"f2c")) {
         double c = F2C(temp);
         printf("%lf \n", c);
 

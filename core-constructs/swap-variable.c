@@ -2,8 +2,8 @@
 #include <string.h>
 
 int main(){
-    char x[] = "Hello" ;
-    char y[] = "World";
+    char x[15] = "Hello" ;
+    char y[15] = "World";
     // char x = "h" ;
     // char y = "w";
 
@@ -22,7 +22,7 @@ int main(){
     // y = x - y;
     // x = x - y;
 
-    // For strings:
+    // For strings: (must be same size)
     char temp[20];
     strcpy(temp, x);
     strcpy(x, y);

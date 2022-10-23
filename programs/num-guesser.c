@@ -9,29 +9,25 @@
     const int MAX = 100;
     int number = (rand() % MAX) + MIN;
     int guess;
-
+    int guesses = 0;
     
     do{
         printf("\nGuess the number between 1 -100: ");
         scanf("%d", &guess);
 
         if (guess == number){
-            printf("\nCorrect! Well done!");
+            printf("\nCorrect! Well done! It only took you %d tries! \n", guesses);
             break;
         }
         else if(guess > number){
             printf("\nToo high!");
-            continue;
         }
         else if(guess < number){
-            printf("\nToo low!");
-            continue;            
+            printf("\nToo low!");           
         }
-        else{
-            printf("\nIncorrect! Try again.");
-        }
+        guesses++;
     }while (1);
 
-
+    
     return 0;
  }

@@ -1,13 +1,22 @@
 #include <stdio.h>
-#include <math.h>
+#include <string.h>
 
 int main(){
-    int num = 0;
-    int sum = 0;
+    char name[25];
 
-    while(num > 0){
-        printf("Enter a number above 0: ");
-        scanf("%d", &num);
+    printf("What's your name: ");
+    fgets(name, 25, stdin);
+    name[strlen(name) -1] = '\0';
+
+    while (strlen(name) <= 2){
+        printf("\nName must be 3 characters long! \n");
+        printf("What's your name: ");
+        fgets(name, 25, stdin);
+        name[strlen(name) -1] = '\0';
     }
+    
+    printf("\nHello %s \n", name);
+
+
     return 0;
 }

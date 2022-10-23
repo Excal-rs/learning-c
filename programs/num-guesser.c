@@ -5,7 +5,9 @@
  int main(){
     srand(time(0));
 
-    int number = (rand() % 100) + 1;
+    const int MIN = 1;
+    const int MAX = 100;
+    int number = (rand() % MAX) + MIN;
     int guess;
 
     
@@ -17,11 +19,19 @@
             printf("\nCorrect! Well done!");
             break;
         }
+        else if(guess > number){
+            printf("\nToo high!");
+            continue;
+        }
+        else if(guess < number){
+            printf("\nToo low!");
+            continue;            
+        }
         else{
             printf("\nIncorrect! Try again.");
         }
     }while (1);
 
-    
+
     return 0;
  }

@@ -2,7 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 
-char *strlwr(char string[]){  // have to manually define function as they are not in standard c lib
+char strlwr(char string[]){  // have to manually define function as they are not in standard c lib
     for(int i = 0; string[i]; i++){
         string[i] = tolower(string[i]);
     }

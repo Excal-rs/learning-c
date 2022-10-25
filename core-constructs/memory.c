@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    // memory = an array og bytes within ram - street
+    // memory = an array of bytes within ram - street
     // memory address = the address of where a memory block is located - house addr
     // memory block - a single byte within memory, used to hold some values - person
     char a;

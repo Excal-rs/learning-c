@@ -25,7 +25,7 @@ int main(){
     char winner = ' ';
     resetBoard();
 
-    while(winner == ' ' && checkFreeSpaces != 0){
+    while(winner == ' ' && checkFreeSpaces() != 0){
         printBoard();
 
         playerMove();
